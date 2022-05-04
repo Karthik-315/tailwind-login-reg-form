@@ -13,7 +13,7 @@ module.exports = {
             },
 
             backgroundImage: {
-                "main-bg": "url('./assets/images/main-bg.jpg')",
+                "main-bg": "url('../assets/images/main-bg.jpg')",
             },
         },
     },
