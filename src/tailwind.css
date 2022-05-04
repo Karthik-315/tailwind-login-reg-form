@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    html {
+        @apply h-full;
+    }
+
+    .flex-col-center {
+        @apply flex flex-col justify-center items-center;
+    }
+
+    .button-active {
+        @apply font-bold text-6xl;
+    }
+
+    .form-input-container {
+        @apply relative h-16 w-11/12 lg:w-3/4 grow my-1 flex-col-center;
+    }
+
+    .form-user-input {
+        @apply form-input w-full h-full pt-7 pl-2 text-xl rounded-sm focus:ring-2 focus:ring-dark-blue-300 valid:ring-dark-blue-500;
+    }
+
+    .form-input-label {
+        @apply absolute top-1/4 flex h-full w-full pl-4 pointer-events-none text-slate-400 text-xl
+        peer-focus:top-1 peer-focus:pl-2 peer-focus:text-sm peer-focus:uppercase peer-focus:text-dark-blue-900 peer-focus:font-semibold 
+        peer-valid:top-1 peer-valid:pl-2 peer-valid:text-sm peer-valid:uppercase peer-valid:text-dark-blue-900 peer-valid:font-semibold;
+    }
+
+    .label-transition {
+        transition: top 300ms ease-in-out, padding 300ms ease-in-out;
+    }
+
+    .test-border {
+        @apply border-2 border-solid border-red-800;
+    }
+}

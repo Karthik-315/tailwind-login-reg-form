@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/styles.css" />
+
+        <title>Tailwind Login Form</title>
+        <script defer src="scripts/app.js"></script>
+    </head>
+
+    <body
+        class="min-h-full font-mono flex-col-center bg-slate-200 bg-main-bg bg-no-repeat bg-cover bg-fixed"
+    >
+        <main
+            class="flex grow w-full p-0 md:w-5/6 md:grow-0 bg-white rounded-md shadow-md shadow-gray-600/70"
+        >
+            <section class="relative hidden w-1/2 md:block">
+                <img
+                    src="./assets/images/intro-image.jpg"
+                    alt="Intro"
+                    class="absolute inset-0 h-full w-full object-cover"
+                />
+
+                <article class="absolute inset-0 bg-neutral-900/70 z-10"></article>
+
+                <article class="absolute inset-8 z-20 flex flex-col justify-around">
+                    <h2
+                        class="text-white font-semibold text-2xl lg:text-4xl leading-normal uppercase"
+                    >
+                        Be a part of the
+                        <span class="uppercase text-neon-green">most</span> preffered
+                        streaming service, that serves NO ADS!
+                    </h2>
+
+                    <h3 class="text-white text-xl lg:text-3xl leading-normal">
+                        Join us today, to get <span class="text-neon-green">50%</span> off
+                        for the first three months.
+                    </h3>
+                </article>
+            </section>
+
+            <section class="w-full md:w-1/2">
+                <article class="w-full pt-2 bg-dark-blue-500 article--header">
+                    <div
+                        class="flex justify-center items-center mb-2 p-2 border-b border-solid border-slate-200/0"
+                    >
+                        <img
+                            src="./assets/images/logo-desktop.png"
+                            alt="Logo"
+                            class="h-8 w-8 mr-2"
+                        />
+                        <h2 class="ml-2 uppercase text-white font-semibold text-2xl">
+                            Notflix
+                        </h2>
+                    </div>
+
+                    <div class="flex justify-center items-center mb-3 px-2 login-reg-tab">
+                        <button
+                            class="w-full button button--login-tab text-xl font-thin text-white button-active md:text-2xl"
+                        >
+                            <h2 class="m-0 uppercase text-center pointer-events-none">
+                                Login
+                            </h2>
+                        </button>
+
+                        <hr class="h-10 w-px mx-2 bg-slate-200/50" />
+
+                        <button
+                            class="w-full button button--register-tab text-xl font-thin text-white md:text-2xl"
+                        >
+                            <h2 class="m-0 uppercase text-center pointer-events-none">
+                                Register
+                            </h2>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="w-full p-1 pb-4 article--login">
+                    <div class="min-w-full">
+                        <h2
+                            class="m-2 text-xl font-normal text-center text-dark-blue-900"
+                        >
+                            Welcome back!
+                        </h2>
+                    </div>
+
+                    <form class="flex-col-center mt-2 from--login" method="POST">
+                        <article class="form-input-container">
+                            <input
+                                type="text"
+                                name="username"
+                                class="form-user-input peer"
+                                required
+                            />
+                            <!-- prettier-ignore -->
+                            <label
+                            for="username"
+                            class="form-input-label label-transition"
+                        >
+                            <span class="">Username</span>
+                        </label>
+                        </article>
+
+                        <article class="form-input-container">
+                            <input
+                                type="password"
+                                name="password"
+                                class="relative pr-12 form-user-input peer"
+                                required
+                            />
+                            <!-- prettier-ignore -->
+                            <label
+                                for="password"
+                                class="form-input-label label-transition"
+                            >
+                                <span class="">Password</span>
+                            </label>
+
+                            <!-- prettier-ignore -->
+                            <button
+                                type="button"
+                                class="absolute bottom-2 right-4 h-6 w-6 invisible
+                                peer-focus:visible peer-valid:visible button-show-password button-show-password--1"
+                            >
+                                <img
+                                    src="./assets/images/eye.png"
+                                    class="pointer-events-none"
+                                />
+                            </button>
+
+                            <!-- prettier-ignore -->
+                            <button
+                                type="button"
+                                class="absolute bottom-2 right-4 h-6 w-6 hidden invisible 
+                                peer-focus:visible peer-valid:visible button-hide-password button-hide-password--1"
+                            >
+                                <img
+                                    src="./assets/images/hidden.png"
+                                    class="pointer-events-none"
+                                />
+                            </button>
+                        </article>
+
+                        <article class="h-16 w-11/12 lg:w-3/4 flex justify-between">
+                            <div class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    name="checkbox"
+                                    class="form-checkbox mx-1 rounded-sm focus:ring-2 focus:text-dark-blue-900"
+                                />
+
+                                <label for="checkbox" class="mx-1">
+                                    <span class="text-sm lg:text-xl">Remember Me?</span>
+                                </label>
+                            </div>
+
+                            <div class="flex items-center mx-2">
+                                <a
+                                    href="#"
+                                    class="text-sm lg:text-xl font-semibold text-dark-blue-500 hover:text-dark-blue-900 visited:text-dark-blue-500 text-right"
+                                >
+                                    Forgot Password
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="form-input-container static h-10 mt-4 bg-red-300">
+                            <button
+                                type="submit"
+                                class="w-full h-full bg-dark-blue-300 text-white text-2xl rounded-sm uppercase cursor-pointer tracking-wider"
+                            >
+                                Login
+                            </button>
+                        </article>
+                    </form>
+
+                    <div class="my-4">
+                        <!-- prettier-ignore -->
+                        <span
+                        class="block w-full bg-white text-xs text-center"
+                    >
+                        Or Login With One Click
+                    </span>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <!-- prettier-ignore -->
+                        <a href="#" class="mx-4 p-2 rounded-md ring-1 ring-slate-400/50 
+                        hover:ring-slate-500 transition-ring duration-300 ease-in-out">
+                            <img src="./assets/images/google.png" alt="Logo" class="h-7 w-7 m-0" />
+                        </a>
+
+                        <!-- prettier-ignore -->
+                        <a href="#" class="mx-4 p-2 rounded-md ring-1 ring-slate-400/50
+                        hover:ring-slate-500 transition-ring duration-300 ease-in-out">
+                            <img src="./assets/images/facebook.png" alt="Logo" class="h-7 w-7 m-0" />
+                        </a>
+                    </div>
+                </article>
+
+                <article class="w-full p-1 pb-4 article--register hidden">
+                    <div class="min-w-full">
+                        <h2
+                            class="m-2 text-xl font-normal text-center text-dark-blue-900"
+                        >
+                            Welcome To Our Site!
+                        </h2>
+                    </div>
+
+                    <form class="flex-col-center mt-2 from--login" method="POST">
+                        <div class="form-input-container">
+                            <input
+                                type="email"
+                                name="email"
+                                class="form-user-input peer"
+                                required
+                            />
+                            <!-- prettier-ignore -->
+                            <label
+                            for="email"
+                            class="form-input-label label-transition"
+                        >
+                            <span class="">E-Mail</span>
+                        </label>
+                        </div>
+
+                        <div class="form-input-container">
+                            <input
+                                type="text"
+                                name="username"
+                                class="form-user-input peer"
+                                required
+                            />
+                            <!-- prettier-ignore -->
+                            <label
+                            for="username"
+                            class="form-input-label label-transition"
+                        >
+                            <span class="">Choose a Username</span>
+                        </label>
+                        </div>
+
+                        <div class="form-input-container">
+                            <input
+                                type="password"
+                                name="password"
+                                class="form-user-input peer"
+                                required
+                            />
+                            <!-- prettier-ignore -->
+                            <label
+                                for="password"
+                                class="form-input-label label-transition"
+                            >
+                                <span class="">Password</span>
+                            </label>
+
+                            <!-- prettier-ignore -->
+                            <button
+                                type="button"
+                                class="absolute bottom-2 right-4 h-6 w-6 invisible
+                                peer-focus:visible peer-valid:visible  button-show-password button-show-password--2"
+                            >
+                                <img
+                                    src="./assets/images/eye.png"
+                                    class="pointer-events-none"
+                                />
+                            </button>
+
+                            <!-- prettier-ignore -->
+                            <button
+                                type="button"
+                                class="absolute bottom-2 right-4 h-6 w-6 hidden invisible 
+                                peer-focus:visible peer-valid:visible  button-hide-password button-hide-password--2"
+                            >
+                                <img
+                                    src="./assets/images/hidden.png"
+                                    class="pointer-events-none"
+                                />
+                            </button>
+                        </div>
+
+                        <div class="form-input-container">
+                            <input
+                                type="password"
+                                name="password-again"
+                                class="form-user-input peer"
+                                required
+                            />
+
+                            <!-- prettier-ignore -->
+                            <label
+                                for="password-again"
+                                class="form-input-label label-transition"
+                            >
+                                <span>Re-enter password</span>
+                            </label>
+
+                            <!-- prettier-ignore -->
+                            <button
+                                type="button"
+                                class="absolute bottom-2 right-4 h-6 w-6 invisible
+                                peer-focus:visible peer-valid:visible  button-show-password button-show-password--3"
+                            >
+                                <img
+                                    src="./assets/images/eye.png"
+                                    class="pointer-events-none"
+                                />
+                            </button>
+
+                            <!-- prettier-ignore -->
+                            <button
+                                type="button"
+                                class="absolute bottom-2 right-4 h-6 w-6 button--hide-password hidden invisible 
+                                peer-focus:visible peer-valid:visible  button-hide-password button-hide-password--3"
+                            >
+                                <img
+                                    src="./assets/images/hidden.png"
+                                    class="pointer-events-none"
+                                />
+                            </button>
+                        </div>
+
+                        <div class="form-input-container static h-10 mt-4 bg-red-300">
+                            <button
+                                type="submit"
+                                class="w-full h-full bg-dark-blue-300 text-white text-2xl rounded-sm uppercase cursor-pointer tracking-wider"
+                            >
+                                Join!
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="my-4">
+                        <!-- prettier-ignore -->
+                        <span
+                        class="block w-full bg-white text-xs text-center"
+                    >
+                        Or Join With One Click
+                    </span>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <a href="#" class="mx-4">
+                            <img
+                                src="./assets/images/google.png"
+                                alt="Logo"
+                                class="h-7 w-7 m-0"
+                            />
+                        </a>
+
+                        <a href="#" class="mx-4">
+                            <img
+                                src="./assets/images/facebook.png"
+                                alt="Logo"
+                                class="h-7 w-7 m-0"
+                            />
+                        </a>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
